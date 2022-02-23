@@ -110,6 +110,9 @@ def main():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
+                    if text_box is not None:
+                        text_box.closed = True
+                        text_box.check_close()
                     menu()
 
             if event.type == pygame.MOUSEBUTTONDOWN:
